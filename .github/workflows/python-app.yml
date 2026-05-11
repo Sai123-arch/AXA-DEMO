@@ -1,23 +1,30 @@
-name: Simple Python Workflow
+name: Event Filter Practice
 
 on:
+
+  # 1. Push Event
   push:
+    branches:
+      - main
+
+  # 2. Pull Request Event
+  pull_request:
+    types:
+      - opened
+      - closed
+
+  # 3. Issue Event
+  issues:
+    types:
+      - opened
 
 jobs:
 
-  run-python:
+  demo-job:
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Run Python File
-        run: python python-mod.py
+      - name: Print Message
+        run: echo "Workflow Triggered Successfully"
