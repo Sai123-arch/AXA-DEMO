@@ -26,5 +26,14 @@ jobs:
 
     steps:
 
-      - name: Print Message
-        run: echo "Workflow Triggered Successfully"
+     - name: Checkout Code
+       uses: actions/checkout@v4
+
+     - name: Create Report File
+       run: echo "GitHub Actions Artifact Practice" > report.txt
+
+     - name: Upload Artifact
+       uses: actions/upload-artifact@v4
+       with:
+          name: practice-report
+          path: report.txt
