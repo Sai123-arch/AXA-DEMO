@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test report
-          path: artifacts folder/
+          path: artifacts_folder/
 
       - name : Deployment done
         run : |
@@ -87,7 +87,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: test report
-          path: downloaded-report/
+          path: artifacts_folder/
       - name : output view
         run : ls
 
