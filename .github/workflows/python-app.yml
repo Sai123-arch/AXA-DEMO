@@ -54,8 +54,7 @@ jobs:
           mkdir reports
           echo "Python build completed successfully" > reports/build-report.txt
 
-      - name : caller reusable flow
-        uses: ./.github\workflows\original_workflow.yml
+        
 
       # ----------------------------------------
       # Step 8: Upload Artifact
@@ -69,6 +68,11 @@ jobs:
       - name : Deployment done
         run : |
           echo "All set to done"
+
+  call-workflow:
+    needs: build
+
+    uses: ./.github/workflows/original_workflow.yml
 
 
   test:
