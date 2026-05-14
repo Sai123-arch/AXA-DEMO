@@ -51,7 +51,8 @@ jobs:
       # ----------------------------------------
       - name: Create Build Report
         run: |
-          echo "Python build completed successfully" > build-report.txt
+          mkdir reports
+          echo "Python build completed successfully" > reports/build-report.txt
 
         
 
@@ -62,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test report
-          path: artifacts_folder/
+          path: reports/
 
       - name : Deployment done
         run : |
