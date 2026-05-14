@@ -55,7 +55,7 @@ jobs:
           echo "Python build completed successfully" > reports/build-report.txt
 
       - name : caller reusable flow
-        uses: .github\workflows\original_workflow.yml
+        uses: ./.github\workflows\original_workflow.yml
 
       # ----------------------------------------
       # Step 8: Upload Artifact
