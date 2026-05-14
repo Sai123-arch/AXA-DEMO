@@ -46,4 +46,4 @@ jobs:
   
       - name: Deploy App
         run: |
-          echo "Files ready to deploy:"
+          echo "Files ready to deploy now:"
