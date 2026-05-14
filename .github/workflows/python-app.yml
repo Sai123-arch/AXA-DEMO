@@ -61,7 +61,7 @@ jobs:
       - name: Upload Build Report
         uses: actions/upload-artifact@v4
         with:
-          name: python-build-report
+          name: test report
           path: artifacts folder/
 
       - name : Deployment done
@@ -86,7 +86,7 @@ jobs:
       - name: Download Python Report
         uses: actions/download-artifact@v4
         with:
-          name: python-build-report
+          name: test report
           path: downloaded-report/
       - name : output view
         run : ls
