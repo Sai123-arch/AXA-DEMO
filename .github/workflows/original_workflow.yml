@@ -1,0 +1,15 @@
+name: Started Workflow
+
+on:
+  workflow_call:
+
+jobs:
+
+  original_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run this workflow
+        run: echo "Hello this is original workflow file"
+
+
