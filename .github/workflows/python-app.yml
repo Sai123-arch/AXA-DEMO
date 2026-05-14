@@ -88,10 +88,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: python-build-report
-          # path: downloaded-report/
+          path: downloaded-report/
       - name : output view
         run : ls
-        
+
 
       # Show Downloaded Files
       - name: Verify Downloaded Files
