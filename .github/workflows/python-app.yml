@@ -70,7 +70,6 @@ jobs:
           echo "All set to done"
 
   call-workflow:
-    needs: build
 
     uses: ./.github/workflows/original_workflow.yml
 
