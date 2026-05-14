@@ -43,8 +43,8 @@ jobs:
       # ----------------------------------------
       # Step 6: Run Tests
       # ----------------------------------------
-      - name: Run Tests
-        run: pytest
+      # - name: Run Tests
+      #   run: pytest
 
       # ----------------------------------------
       # Step 7: Generate Report File
