@@ -38,7 +38,7 @@ jobs:
       # Step 5: Run Python Application
       # ----------------------------------------
       - name: Run Application
-        run: python-mod.py
+        run: python python-mod.py
 
       # ----------------------------------------
       # Step 6: Run Tests
