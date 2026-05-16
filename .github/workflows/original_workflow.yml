@@ -15,7 +15,9 @@
 
 name: Job Outputs Demo
 
-on: [push]
+on:
+  push:
+    branches: [main]
 
 jobs:
 
