@@ -97,12 +97,12 @@ jobs:
       - name: Verify Downloaded Files
         run: |
           echo "Downloaded Files:"
-          ls -R downloaded-report/
+          ls -R artifacts_folder/
 
       # Display File Content
       - name: Read Report File
         run: |
-          cat downloaded-report/build-report.txt
+          cat artifacts_folder/build-report.txt
 
       # Setup Python
       - name: Setup Python

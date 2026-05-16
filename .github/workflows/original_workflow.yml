@@ -48,7 +48,7 @@ jobs:
       - name: Print Message
         run: |
           echo "Job 1 said: ${{ needs.job1.outputs.my_message }}"
-          # Output: Job 1 said: Hello from Job 1!
+          # Output: Job 1 said: Hello from Job 1 oak!
 
 
 
