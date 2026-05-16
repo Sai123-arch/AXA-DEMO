@@ -69,10 +69,6 @@ jobs:
         run : |
           echo "All set to done for deployment"
 
-  # call-workflow:
-
-  #   uses: ./.github/workflows/original_workflow.yml
-
 
   test:
     name: "⬇️ Download Artifact Job"
@@ -88,7 +84,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: test-report
-          path: artifacts_folder/
+          path: downloaded-report/
       - name : output view
         run : ls
 
@@ -97,12 +93,12 @@ jobs:
       - name: Verify Downloaded Files
         run: |
           echo "Downloaded Files:"
-          ls -R artifacts_folder/
+          ls -R downloaded-report/
 
       # Display File Content
       - name: Read Report File
         run: |
-          cat artifacts_folder/build-report.txt
+          cat downloaded-report/build-report.txt
 
       # Setup Python
       - name: Setup Python
