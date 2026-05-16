@@ -67,7 +67,7 @@ jobs:
 
       - name : Deployment done
         run : |
-          echo "All set to done"
+          echo "All set to done for deployment"
 
   call-workflow:
 
