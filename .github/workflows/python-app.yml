@@ -62,16 +62,16 @@ jobs:
       - name: Upload Build Report
         uses: actions/upload-artifact@v4
         with:
-          name: test report
+          name: test-report
           path: reports/
 
       - name : Deployment done
         run : |
           echo "All set to done for deployment"
 
-  call-workflow:
+  # call-workflow:
 
-    uses: ./.github/workflows/original_workflow.yml
+  #   uses: ./.github/workflows/original_workflow.yml
 
 
   test:
@@ -87,7 +87,7 @@ jobs:
       - name: Download Python Report
         uses: actions/download-artifact@v4
         with:
-          name: test report
+          name: test-report
           path: artifacts_folder/
       - name : output view
         run : ls
